@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Markdown Viewer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='prism.css') }}">
+</head>
+<body>
+    {{ content | safe }}
+    <script src="{{ url_for('static', filename='prism.js') }}"></script>
+</body>
+</html>
