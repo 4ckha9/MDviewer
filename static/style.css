@@ -2,39 +2,67 @@ body {
     font-family: sans-serif;
     margin: 20px;
 }
-/* インラインコードのスタイル */
-code {
-    background-color: #e8e8e8;
-    padding: 2px 4px;
-    border-radius: 3px;
-    font-family: Consolas, monospace;
-    font-size: 13px;
+  h1 {
+    position: relative;
+    width: 20em;
+    background: #dfefff;
+    box-shadow: 0px 0px 0px 5px #dfefff;
+    border: dashed 2px white;
+    padding: 0.2em 0.5em;
+    color: #454545;
+  }
+  
+  h1:after {
+    position: absolute;
+    content: '';
+    left: -7px;
+    top: -7px;
+    border-width: 0 0 15px 15px;
+    border-style: solid;
+    border-color: #fff #fff #a8d4ff;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
   }
 
-/* コードブロックのスタイル */
-pre code {
-    background-color: #f0f0f0;
-    padding: 16px;
-    border-radius: 4px;
-    font-family: Consolas, monospace;
-    font-size: 14px;
-    overflow-x: auto; /* 横スクロール対応 */
+
+  h2 {
+    position: relative;
+    padding-left: 25px;
+    width: 20em;
+  }
+  
+  h2:before {
+    position: absolute;
+    content: '';
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border: none;
+    border-left: solid 15px transparent;
+    border-bottom: solid 15px rgb(119, 195, 223);
+  }
+  h2:after {
+    position: absolute;
+    content: '';
+    bottom: -3px;
+    left: 10px;
+    width: 100%;
+    border-bottom: solid 3px rgb(119, 195, 223);
   }
 
-#drop-area {
-    width: 200px; /* 幅を調整 */
-    height: 100px; /* 高さを調整 */
-    border: 2px dashed #ccc; /* 枠線 */
-    text-align: center;
-    border-radius: 5px; /* 角を丸める */
-  }
+/* 付箋風リスト */
+ul, ol {
+  padding: 0;
+  position: relative;
+  width: 25em;
+}
 
-/* Python のコードブロック */
-pre code.language-python {
-    color: #333;
-    background: #f8f8f8;
-    /* Python 固有のキーワードやシンタックスを色分け */
-    .keyword { color: #007020; }
-    .string { color: #d14; }
-    .comment { color: #998; font-style: italic; }
-  }
+ul li, ol li {
+  color: #2d8fdd;
+  border-left: solid 6px #2d8fdd;/*左側の線*/
+  background: #f1f8ff;/*背景色*/
+  margin-bottom: 3px;/*下のバーとの余白*/
+   line-height: 1.5;
+  padding: 0.5em;
+  list-style-type: none!important;/*ポチ消す*/
+}
