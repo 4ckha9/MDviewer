@@ -47,7 +47,7 @@ def show_markdown(filename='index'):
             content = re.sub(r'\[([^\]]+)\]\(([^)]+\.md)\)', md_link_to_html, content)
 
             # MarkdownをHTMLに変換
-            html = markdown2.markdown(content, extras=['code-friendly', 'fenced-code-blocks', 'highlightjs-lang'])
+            html = markdown2.markdown(content, extras=['code-friendly', 'fenced-code-blocks', 'highlightjs-lang','tables'])
             
             # HTMLテンプレートに変換済みのMarkdown内容を渡して表示
             return render_template('index.html', content=html)

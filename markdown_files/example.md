@@ -11,7 +11,7 @@ print("Hello, World!")
 
 
 コードをコピーする
-# 条件分岐の例
+## 条件分岐の例
 ```python
 def check_even_odd(number):
     if number % 2 == 0:
@@ -20,7 +20,7 @@ def check_even_odd(number):
         return "Odd"
 ```
 
-# 使用例
+## 使用例
 ```python
 print(check_even_odd(10))  # 出力: Even
 print(check_even_odd(7))   # 出力: Odd
@@ -30,7 +30,7 @@ print(check_even_odd(7))   # 出力: Odd
 
 
 コードをコピーする
-# リストの基本操作
+## リストの基本操作
 ```python
 numbers = [1, 2, 3, 4, 5]
 
